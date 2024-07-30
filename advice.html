@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Expenses</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #d4d8e3;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            padding: 20px 0;
+            background-color: #d4d8e3;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 20px;
+            background-color: #5585A3;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .navbar .dropdown-toggle {
+            text-decoration: none;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 20px;
+            background-color: #5585A3;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: #6A9FBF;
+        }
+
+        .navbar .dropdown-toggle:hover {
+            background-color: #6A9FBF;
+        }
+
+        .navbar a.active {
+            background-color: #6495B6;
+            color: black;
+        }
+
+        .navbar .dropdown-toggle.active {
+            background-color: #6495B6;
+            color: black;
+        }
+
+        .dropdown-menu {
+            background-color: #5585A3;
+            border-radius: 10px;
+        }
+
+        .dropdown-item {
+            color: white;
+        }
+
+        .dropdown-item:hover {
+            background-color: #6A9FBF;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+            box-sizing: border-box;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .main-content h1 {
+            color: #0d3a5c;
+            font-size: 80px;
+            font-weight: bold;
+            margin-bottom: 40px;
+            padding-top: 50px;
+        }
+
+        .main-content p {
+            color: #0d3a5c;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .solutions {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+
+        .solution {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+        }
+
+        .solution img {
+            width: 400px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        .solution p {
+            color: #0d3a5c;
+            font-size: 1em;
+            margin-top: 0;
+        }
+
+        .bottom-image {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            width: 100px;
+            height: auto;
+        }
+
+        .disclaimer {
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: #0d3a5c;
+        }
+
+        .disclaimer a {
+            color: #0d3a5c;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="home4.html" class="active">HOME</a>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                EXPENSE TRACKING
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="tracking.html">EXPENSE TRACKING</a></li>
+            </ul>
+        </div>
+        <a href="financialsugg.html">FINANCIAL SUGGESTION</a>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                LOG OUT
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="signup.html">SIGN UP</a></li>
+                <li><a class="dropdown-item" href="login.html">LOGIN</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <h1>Lenny Advice's</h1>
+        <p>I have noticed that you have exceeded the monthly budget of $400</p>
+        <h2>here are some of my solution</h2>
+        <div class="solutions">
+            <div class="solution">
+                <img src="laptop.png" alt="Solution 1">
+                <p>Focus on saving 20% of your monthly allowance, reduce unnecessary spendings</p>
+            </div>
+            <div class="solution">
+                <img src="laptop.png" alt="Solution 2">
+                <p>Seems like someone had a splendid! Reduce shopping expenses.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="disclaimer">
+        This is not financial advice, it is just for teaching purposes. <a href="https://www.mas.gov.sg">Read more at MAS</a>.
+    </div>
+
+    <img src="file2.png" alt="Bottom Left Image" class="bottom-image">
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

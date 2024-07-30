@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les Expenses - Get Started</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #d4d8e3;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 20px 0;
+            background-color: #d4d8e3;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 20px;
+            background-color: #5585A3;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .navbar .dropdown-toggle {
+            text-decoration: none;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 20px;
+            background-color: #5585A3;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
+        .navbar a:hover {
+            background-color: #6A9FBF;
+        }
+
+        .navbar .dropdown-toggle:hover {
+            background-color: #6A9FBF;
+        }
+
+        .navbar a.active {
+            background-color: #6495B6;
+            color: black;
+        }
+
+        .navbar .dropdown-toggle.active {
+            background-color: #6495B6;
+            color: black;
+        }
+
+        .dropdown-menu {
+            background-color: #5585A3;
+            border-radius: 10px;
+        }
+
+        .dropdown-item {
+            color: white;
+        }
+
+        .dropdown-item:hover {
+            background-color: #6A9FBF;
+        }
+
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 100px;
+            flex-grow: 1;
+        }
+
+        .form-section {
+            max-width: 400px;
+        }
+
+        .form-section h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .form-section label {
+            display: block;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .form-section input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 2px solid #0d3a5c;
+            background: none;
+            font-size: 1em;
+        }
+
+        .form-section .btn {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            border-radius: 10px;
+            background-color: #5585A3;
+            color: white;
+            text-decoration: none;
+            border: none;
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .form-section .btn:hover {
+            background-color: #6A9FBF;
+        }
+
+        .form-section .btn-singpass {
+            background-color: #FF0000;
+        }
+
+        .form-section .btn-singpass:hover {
+            background-color: #cc0000;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="home4.html" class="active">HOME</a>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                EXPENSE TRACKING
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="tracking.html">EXPENSE TRACKING</a></li>
+                <li><a class="dropdown-item" href="upload.html">EXPENSE UPLOADS</a></li>
+            </ul>
+        </div>
+        <a href="financialsugg.html">FINANCIAL SUGGESTION</a>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                LOG IN
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="login.html">LOGIN</a></li>
+                <li><a class="dropdown-item" href="signup.html">SIGN UP</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="form-section">
+            <h1>GET STARTED BELOW.</h1>
+            <label for="email">Phone or email</label>
+            <input type="text" id="email" name="email" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required>
+            <a href="tracking.html" class="btn">CONTINUE</a>
+            <a href="https://www.singpass.gov.sg" target="_blank" class="btn btn-singpass">Login with Singpass</a>
+        </div>
+        <div class="image-section">
+            <img src="home2.png" alt="Illustration"> 
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
