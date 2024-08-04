@@ -161,15 +161,16 @@
 </head>
 <body>
     <div class="navbar">
-        <img src="LES_logo.jpg" alt="Les Expenses Logo"> <!-- Logo added here -->
+        <img src="LES_logo.jpg" alt="Les Expenses Logo"> 
         <a href="home4.html" class="active">HOME</a>
-        <a href="wallet.html">WALLET</a> <!-- Wallet button added here -->
+        <a href="wallet.html">WALLET</a> 
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
                 EXPENSE UPLOADS
             </button>
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="tracking.html">EXPENSE TRACKING</a></li>
+                <li><a class="dropdown-item" href="history.html">TRANSACTION HISTORY</a></li>
             </ul>
         </div>
         <a href="financialsugg.html">FINANCIAL SUGGESTION</a>
@@ -192,7 +193,7 @@
             <form action="/upload" method="post" enctype="multipart/form-data">
                 <input type="file" id="fileInput" name="file">
                 <label for="fileInput">Choose File</label>
-                <a href="tracking.html" class="btn btn-primary">CONTINUE</a>
+                <a href="history.html" class="btn btn-primary">CONTINUE</a>
             </form>
         </div>
     </div>

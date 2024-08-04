@@ -42,13 +42,45 @@
             text-align: center;
         }
 
+        .navbar .dropdown-toggle {
+            text-decoration: none;
+            color: white;
+            padding: 10px 30px;
+            border-radius: 20px;
+            background-color: #5585A3;
+            font-size: 1.2em;
+            text-align: center;
+        }
+
         .navbar a:hover {
+            background-color: #6A9FBF;
+        }
+
+        .navbar .dropdown-toggle:hover {
             background-color: #6A9FBF;
         }
 
         .navbar a.active {
             background-color: #6495B6;
             color: black;
+        }
+
+        .navbar .dropdown-toggle.active {
+            background-color: #6495B6;
+            color: black;
+        }
+
+        .dropdown-menu {
+            background-color: #5585A3;
+            border-radius: 10px;
+        }
+
+        .dropdown-item {
+            color: white;
+        }
+
+        .dropdown-item:hover {
+            background-color: #6A9FBF;
         }
 
         .wallet-container {
@@ -93,20 +125,19 @@
 
         .add-card-form {
             margin-top: 30px;
-        }
-
-        .add-card-form h3 {
-            color: #0d3a5c;
-            margin-bottom: 15px;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
         }
 
         .add-card-form input {
-            width: calc(100% - 20px);
+            width: 100%;
             padding: 10px;
             margin-bottom: 10px;
             border-radius: 5px;
             border: 1px solid #ccc;
             font-size: 1em;
+            box-sizing: border-box;
         }
 
         .add-card-form button {
@@ -128,10 +159,19 @@
 </head>
 <body>
     <div class="navbar">
-        <img src="LES_logo.jpg" alt="Les Expenses Logo"> <!-- Logo added here -->
-        <a href="#" class="active">HOME</a>
+        <img src="LES_logo.jpg" alt="Les Expenses Logo">
+        <a href="home4.html" class="active">HOME</a>
         <a href="wallet.html">WALLET</a>
-        <a href="tracking.html">EXPENSE TRACKING</a>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                EXPENSE TRACKING
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="tracking.html">EXPENSE TRACKING</a></li>
+                <li><a class="dropdown-item" href="upload.html">EXPENSE UPLOADS</a></li>
+                <li><a class="dropdown-item" href="history.html">TRANSACTION HISTORY</a></li>
+            </ul>
+        </div>
         <a href="financialsugg.html">FINANCIAL SUGGESTION</a>
         <a href="home4.html">LOG OUT</a>
     </div>
@@ -159,7 +199,7 @@
         <!-- Add Card Form -->
         <div class="add-card-form">
             <h3>Add New Card</h3>
-            <form action="/add-card" method="post">
+            <form id="addCardForm">
                 <input type="text" name="cardNumber" placeholder="Card Number" required>
                 <input type="text" name="cardHolder" placeholder="Card Holder Name" required>
                 <input type="text" name="expiryDate" placeholder="Expiry Date (MM/YY)" required>
@@ -172,5 +212,11 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('addCardForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent default form submission
+            this.reset(); // Reset the form fields
+        });
+    </script>
 </body>
 </html>

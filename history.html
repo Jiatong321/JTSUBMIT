@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Les Expenses</title>
+    <title>Transaction History</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <style>
@@ -12,16 +12,15 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-            height: 100vh;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
             align-items: center;
+            min-height: 100vh;
         }
 
         .navbar {
             display: flex;
-            justify-content: space-between; /* Space items evenly */
+            justify-content: space-between;
             align-items: center;
             width: 100%;
             padding: 20px;
@@ -29,26 +28,26 @@
         }
 
         .navbar img {
-            height: 50px; /* Logo size */
-            margin-right: 20px; /* Space between logo and home button */
+            height: 50px;
+            margin-right: 20px;
         }
 
         .navbar a, .navbar .dropdown-toggle {
             text-decoration: none;
             color: white;
-            padding: 10px 20px; /* Consistent padding */
+            padding: 10px 20px;
             border-radius: 20px;
             background-color: #5585A3;
             font-size: 1.2em;
             text-align: center;
-            white-space: nowrap; /* Prevent text from wrapping */
+            white-space: nowrap;
         }
 
         .navbar a:hover, .navbar .dropdown-toggle:hover {
             background-color: #6A9FBF;
         }
 
-        .navbar a.active, .navbar .dropdown-toggle.active {
+        .navbar a.active {
             background-color: #6495B6;
             color: black;
         }
@@ -66,88 +65,75 @@
             background-color: #6A9FBF;
         }
 
-        .main-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-            padding: 20px;
-            box-sizing: border-box;
-            flex-grow: 1;
+        .header {
             text-align: center;
-        }
-
-        .main-content h1 {
-            color: #0d3a5c;
-            font-size: 80px;
-            font-weight: bold;
-            margin-bottom: 40px;
-            padding-top: 50px;
-        }
-
-        .main-content p {
-            color: #0d3a5c;
-            font-size: 1.2em;
-            margin-bottom: 20px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .solutions {
-            display: flex;
-            justify-content: space-around;
+            padding: 50px 20px;
+            background-color: #6c757d;
+            color: white;
             width: 100%;
         }
 
-        .solution {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 30%;
+        .transactions {
+            width: 80%;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
         }
 
-        .solution img {
-            width: 400px;
-            height: auto;
-            margin-bottom: 10px;
+        .transactions table {
+            width: 100%;
+            border-collapse: collapse;
         }
 
-        .solution p {
-            color: #0d3a5c;
-            font-size: 1em;
-            margin-top: 0;
+        .transactions th, .transactions td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
         }
 
-        .bottom-image {
+        .transactions th {
+            background-color: #5585A3;
+            color: white;
+        }
+
+        .transactions tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        .left-arrow, .right-arrow {
             position: absolute;
-            bottom: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 2em;
+            color: #0d3a5c;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .left-arrow {
             left: 20px;
-            width: 100px;
-            height: auto;
         }
 
-        .disclaimer {
-            margin-top: 20px;
-            font-size: 0.8em;
-            color: #0d3a5c;
+        .right-arrow {
+            right: 20px;
         }
 
-        .disclaimer a {
-            color: #0d3a5c;
-            text-decoration: underline;
-        }
     </style>
 </head>
 <body>
     <div class="navbar">
         <img src="LES_logo.jpg" alt="Les Expenses Logo">
-        <a href="home4.html" class="active">HOME</a>
-        <a href="wallet.html">WALLET</a> 
+        <a href="home4.html">HOME</a>
+        <a href="wallet.html">WALLET</a>
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                EXPENSE TRACKING
+                TRANSACTION HISTORY
             </button>
             <ul class="dropdown-menu">
                 <li><a class="dropdown-item" href="tracking.html">EXPENSE TRACKING</a></li>
+                <li><a class="dropdown-item" href="upload.html">EXPENSE UPLOAD</a></li>
             </ul>
         </div>
         <a href="financialsugg.html">FINANCIAL SUGGESTION</a>
@@ -162,27 +148,53 @@
         </div>
     </div>
 
-    <div class="main-content">
-        <h1>Lenny Advice's</h1>
-        <p>I have noticed that you have exceeded the monthly budget of $400</p>
-        <h2>Here are some of my solutions</h2>
-        <div class="solutions">
-            <div class="solution">
-                <img src="laptop.png" alt="Solution 1">
-                <p>Focus on saving 20% of your monthly allowance, reduce unnecessary spendings</p>
-            </div>
-            <div class="solution">
-                <img src="laptop.png" alt="Solution 2">
-                <p>Seems like someone had a splendid shopping spree! Reduce shopping expenses.</p>
-            </div>
-        </div>
+    <div class="header">
+        <h1>Transaction History</h1>
+        <p>View all your past transactions here</p>
     </div>
 
-    <div class="disclaimer">
-        This is not financial advice, it is just for teaching purposes. <a href="https://www.mas.gov.sg">Read more at MAS</a>.
+    <div class="transactions">
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2024-06-01</td>
+                    <td>Lime Restaurant</td>
+                    <td>Dining</td>
+                    <td>$200.00</td>
+                </tr>
+                <tr>
+                    <td>2024-06-03</td>
+                    <td>Louis Vuitton</td>
+                    <td>Shopping</td>
+                    <td>$300.00</td>
+                </tr>
+                <tr>
+                    <td>2024-06-05</td>
+                    <td>EZ Link</td>
+                    <td>Transport</td>
+                    <td>$50.00</td>
+                </tr>
+                <tr>
+                    <td>2024-06-07</td>
+                    <td>Income Tax</td>
+                    <td>Tax</td>
+                    <td>$20.00</td>
+                </tr>
+                <!-- Add more transaction rows as needed -->
+            </tbody>
+        </table>
     </div>
 
-    <img src="file2.png" alt="Bottom Left Image" class="bottom-image">
+    <a href="tracking.html" class="left-arrow"><i class="fas fa-chevron-left"></i></a>
+    <a href="tracking.html" class="right-arrow"><i class="fas fa-chevron-right"></i></a>
 
     <!-- Bootstrap JS and dependencies -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
