@@ -21,9 +21,15 @@
         .navbar {
             display: flex;
             justify-content: space-evenly;
+            align-items: center;
             padding: 20px 0;
             background-color: #90acdc;
             width: 100%;
+        }
+
+        .navbar img {
+            height: 50px; /* Adjust logo size as needed */
+            margin-right: 20px; /* Space between logo and home link */
         }
 
         .navbar a {
@@ -85,15 +91,49 @@
             font-size: 1.5em;
         }
 
+        .add-card-form {
+            margin-top: 30px;
+        }
+
+        .add-card-form h3 {
+            color: #0d3a5c;
+            margin-bottom: 15px;
+        }
+
+        .add-card-form input {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+        }
+
+        .add-card-form button {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #5585A3;
+            color: white;
+            border: none;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+
+        .add-card-form button:hover {
+            background-color: #6A9FBF;
+        }
+
     </style>
 </head>
 <body>
     <div class="navbar">
+        <img src="LES_logo.jpg" alt="Les Expenses Logo"> <!-- Logo added here -->
         <a href="#" class="active">HOME</a>
         <a href="wallet.html">WALLET</a>
-        <a href="#">EXPENSE TRACKING</a>
-        <a href="#">FINANCIAL SUGGESTION</a>
-        <a href="#">LOG OUT</a>
+        <a href="tracking.html">EXPENSE TRACKING</a>
+        <a href="financialsugg.html">FINANCIAL SUGGESTION</a>
+        <a href="home4.html">LOG OUT</a>
     </div>
 
     <div class="wallet-container">
@@ -114,6 +154,17 @@
                 <div class="card-holder">John Doe</div>
                 <div class="expiry-date">08/24</div>
             </div>
+        </div>
+
+        <!-- Add Card Form -->
+        <div class="add-card-form">
+            <h3>Add New Card</h3>
+            <form action="/add-card" method="post">
+                <input type="text" name="cardNumber" placeholder="Card Number" required>
+                <input type="text" name="cardHolder" placeholder="Card Holder Name" required>
+                <input type="text" name="expiryDate" placeholder="Expiry Date (MM/YY)" required>
+                <button type="submit">Add Card</button>
+            </form>
         </div>
     </div>
 

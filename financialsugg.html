@@ -15,14 +15,19 @@
         }
         .navbar {
             display: flex;
-            justify-content: space-evenly;
-            padding: 20px 0;
+            justify-content: space-between; /* Align items properly */
+            align-items: center; /* Center items vertically */
+            padding: 20px 5px; /* Proper spacing */
             background-color: #d4d8e3;
+        }
+        .navbar img {
+            height: 50px; /* Logo height */
+           
         }
         .navbar a, .navbar .dropdown-toggle {
             text-decoration: none;
             color: white;
-            padding: 10px 30px;
+            padding: 10px 15px; /* Link padding */
             border-radius: 20px;
             background-color: #5585A3;
             font-size: 1.2em;
@@ -110,7 +115,9 @@
 </head>
 <body>
     <div class="navbar">
+        <img src="LES_logo.jpg" alt="Les Expenses Logo">
         <a href="home4.html" class="active">HOME</a>
+        <a href="wallet.html">WALLET</a>
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
                 EXPENSE TRACKING
@@ -153,8 +160,9 @@
         </div>
         <div class="service">
             <img src="financial3.png" alt="Easy UI"> 
-            <h3>Easy peasy UI</h3>
-            <p>Our interface is simple and easy to use.</p>
+            <h3>Financial videos</h3>
+            <a href="video.html" class="btn btn-primary">FINANCIAL LEARNING PLACE</a>
+            <p>Watch our specially handpicked videos for your financial planning.</p>
         </div>
     </div>
 

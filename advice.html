@@ -21,46 +21,34 @@
 
         .navbar {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-between; /* Space items evenly */
+            align-items: center;
             width: 100%;
-            padding: 20px 0;
+            padding: 20px;
             background-color: #d4d8e3;
         }
 
-        .navbar a {
+        .navbar img {
+            height: 50px; /* Logo size */
+            margin-right: 20px; /* Space between logo and home button */
+        }
+
+        .navbar a, .navbar .dropdown-toggle {
             text-decoration: none;
             color: white;
-            padding: 10px 30px;
+            padding: 10px 20px; /* Consistent padding */
             border-radius: 20px;
             background-color: #5585A3;
             font-size: 1.2em;
             text-align: center;
+            white-space: nowrap; /* Prevent text from wrapping */
         }
 
-        .navbar .dropdown-toggle {
-            text-decoration: none;
-            color: white;
-            padding: 10px 30px;
-            border-radius: 20px;
-            background-color: #5585A3;
-            font-size: 1.2em;
-            text-align: center;
-        }
-
-        .navbar a:hover {
+        .navbar a:hover, .navbar .dropdown-toggle:hover {
             background-color: #6A9FBF;
         }
 
-        .navbar .dropdown-toggle:hover {
-            background-color: #6A9FBF;
-        }
-
-        .navbar a.active {
-            background-color: #6495B6;
-            color: black;
-        }
-
-        .navbar .dropdown-toggle.active {
+        .navbar a.active, .navbar .dropdown-toggle.active {
             background-color: #6495B6;
             color: black;
         }
@@ -151,7 +139,9 @@
 </head>
 <body>
     <div class="navbar">
+        <img src="LES_logo.jpg" alt="Les Expenses Logo"> <!-- Logo added here -->
         <a href="home4.html" class="active">HOME</a>
+        <a href="wallet.html">WALLET</a> <!-- Wallet button added here -->
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
                 EXPENSE TRACKING
@@ -175,7 +165,7 @@
     <div class="main-content">
         <h1>Lenny Advice's</h1>
         <p>I have noticed that you have exceeded the monthly budget of $400</p>
-        <h2>here are some of my solution</h2>
+        <h2>Here are some of my solutions</h2>
         <div class="solutions">
             <div class="solution">
                 <img src="laptop.png" alt="Solution 1">
@@ -183,7 +173,7 @@
             </div>
             <div class="solution">
                 <img src="laptop.png" alt="Solution 2">
-                <p>Seems like someone had a splendid! Reduce shopping expenses.</p>
+                <p>Seems like someone had a splendid shopping spree! Reduce shopping expenses.</p>
             </div>
         </div>
     </div>

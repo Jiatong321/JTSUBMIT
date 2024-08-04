@@ -20,25 +20,19 @@
 
         .navbar {
             display: flex;
-            justify-content: space-evenly;
-            padding: 20px 0;
+            justify-content: space-between; /* Align items properly */
+            align-items: center; /* Center items vertically */
+            padding: 20px 30px; /* Proper spacing */
             background-color: #d4d8e3;
         }
-
-        .navbar a {
-            text-decoration: none;
-            color: white;
-            padding: 10px 30px;
-            border-radius: 20px;
-            background-color: #5585A3;
-            font-size: 1.2em;
-            text-align: center;
+        .navbar img {
+            height: 50px; /* Logo height */
+           
         }
-
-        .navbar .dropdown-toggle {
+        .navbar a, .navbar .dropdown-toggle {
             text-decoration: none;
             color: white;
-            padding: 10px 30px;
+            padding: 10px 15px; /* Link padding */
             border-radius: 20px;
             background-color: #5585A3;
             font-size: 1.2em;
@@ -144,7 +138,9 @@
 </head>
 <body>
     <div class="navbar">
+        <img src="LES_logo.jpg" alt="Les Expenses Logo">
         <a href="home4.html" class="active">HOME</a>
+        <a href="wallet.html">WALLET</a>
         <div class="dropdown">
             <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
                 EXPENSE TRACKING
@@ -173,8 +169,8 @@
             <input type="text" id="email" name="email" required>
             <label for="password">Password</label>
             <input type="password" id="password" name="password" required>
-            <a href="tracking.html" class="btn">CONTINUE</a>
-            <a href="https://www.singpass.gov.sg" target="_blank" class="btn btn-singpass">Login with Singpass</a>
+            <a href="upload.html" class="btn">CONTINUE</a>
+            <a href="https://www.singpass.gov.sg/home/ui/login" target="_blank" class="btn btn-singpass">Login with Singpass</a>
         </div>
         <div class="image-section">
             <img src="home2.png" alt="Illustration"> 
