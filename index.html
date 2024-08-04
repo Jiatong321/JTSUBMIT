@@ -129,7 +129,182 @@
                 <li><a class="dropdown-item" href="login.html">LOGIN</a></li>
                 <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
             </ul>
-        </div>
+        </div><!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Les Expenses</title>
+            <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+            <style>
+                body {
+                    background-color: #90acdc;
+                    margin: 0;
+                    padding: 0;
+                    font-family: Arial, sans-serif;
+                }
+                .navbar {
+                    display: flex;
+                    justify-content: space-between; /* Align items properly */
+                    align-items: center; /* Center items vertically */
+                    padding: 20px 30px; /* Proper spacing */
+                    background-color: #90acdc;
+                }
+                .navbar img {
+                    height: 50px; /* Logo height */
+                }
+                .navbar a, .navbar .dropdown-toggle {
+                    text-decoration: none;
+                    color: white;
+                    padding: 10px 15px; /* Link padding */
+                    border-radius: 20px;
+                    background-color: #5585A3;
+                    font-size: 1.2em;
+                    text-align: center;
+                }
+                .navbar a:hover, .navbar .dropdown-toggle:hover {
+                    background-color: #6A9FBF;
+                }
+                .navbar a.active, .navbar .dropdown-toggle.active {
+                    background-color: #6495B6;
+                    color: black;
+                }
+                .dropdown-menu {
+                    background-color: #5585A3;
+                    border-radius: 10px;
+                }
+                .dropdown-item {
+                    color: white;
+                }
+                .dropdown-item:hover {
+                    background-color: #6A9FBF;
+                }
+                .main-content {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    color: #0d3a5c;
+                }
+                .text-section {
+                    max-width: 350px;
+                    padding-left: 200px;
+                }
+                h1 {
+                    font-size: 50px;
+                    font-weight: bold;
+                    padding-top: 50px;
+                    padding-left: 100px;
+                }
+                .main-content p {
+                    font-size: 15px;
+                    margin-bottom: 30px;
+                }
+                .main-content .btn {
+                    padding: 10px 20px;
+                    font-size: 1.2em;
+                    border-radius: 10px;
+                    background-color: #5585A3;
+                    color: white;
+                    text-decoration: none;
+                }
+                .main-content .btn:hover {
+                    background-color: #6A9FBF;
+                }
+                .arrows {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+                }
+                .arrows.left {
+                    left: 20px;
+                }
+                .arrows.right {
+                    right: 20px;
+                }
+                .arrows i {
+                    font-size: 2em;
+                    color: #0d3a5c;
+                }
+                .image-section img {
+                    max-width: 100%;
+                    height: auto;
+                    padding-right: 100px;
+                }
+                .logo {
+                    position: absolute;
+                    bottom: 20px;
+                    left: 20px;
+                    font-size: 1.5em;
+                    color: #0d3a5c;
+                }
+            </style>
+        </head>
+        <body>
+            <div class="navbar">
+                <img src="LES_logo.jpg" alt="Les Expenses Logo">
+                <a href="home4.html" class="active">HOME</a>
+                <a href="wallet.html">WALLET</a> <!-- Wallet button added here -->
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                        EXPENSE TRACKING
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="upload.html">EXPENSE UPLOADS</a></li>
+                    </ul>
+                </div>
+                <a href="financialsugg.html">FINANCIAL SUGGESTION</a>
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
+                        JOIN US
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="signup.html">SIGN UP</a></li>
+                        <li><a class="dropdown-item" href="login.html">LOGIN</a></li>
+                        <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+        
+            <div class="arrows left" id="leftArrow">
+                <i class="fas fa-chevron-left"></i>
+            </div>
+            <h1>Build wealth with Les Expenses</h1>
+            <div class="main-content">
+                <div class="text-section">
+                    <p>Les Expenses is helping individuals to manage their expenses and provides suggestive financial feedback. No joining fees, no hassle.</p>
+                    <a href="signup.html" class="btn">START NOW</a>
+                </div>
+                <div class="image-section">
+                    <img src="home.png" alt="Illustration"> 
+                </div>
+            </div>
+        
+            <div class="arrows right" id="rightArrow">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+        
+            <div class="logo">
+                LES
+            </div>
+        
+            <!-- Bootstrap JS and dependencies -->
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+            <script>
+                document.getElementById('leftArrow').addEventListener('click', function() {
+                    window.location.href = 'home2.html'; 
+                });
+        
+                document.getElementById('rightArrow').addEventListener('click', function() {
+                    window.location.href = 'home2.html'; 
+                });
+            </script>
+        </body>
+        </html>
+        
     </div>
 
     <div class="arrows left" id="leftArrow">
